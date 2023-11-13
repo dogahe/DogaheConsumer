@@ -21,7 +21,9 @@ let package = Package(
   name: "GoogleRidesharingConsumer", platforms: [.iOS(.v14)],
   products: [
     .library(name: "GoogleRidesharingConsumer", targets: ["GoogleRidesharingConsumerTarget"])
-  ], dependencies: [],
+  ], dependencies: [
+    .package(url: "https://github.com/dogahe/DogaheMaps", "1.0.13"..."1.0.13"),
+  ],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingConsumer",
@@ -30,7 +32,11 @@ let package = Package(
     ),
     .target(
       name: "GoogleRidesharingConsumerTarget",
-      dependencies: ["GoogleRidesharingConsumer"],
+      dependencies: ["GoogleRidesharingConsumer",
+                     .product(name: "GoogleMaps", package: "DogaheMaps"),
+                     .product(name: "GoogleMapsCore", package: "DogaheMaps"),
+                     .product(name: "GoogleMapsBase", package: "DogaheMaps"),
+                    ],
       path: "Consumer",
       sources: ["dummy.m"],
       resources: [.copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle")],
