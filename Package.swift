@@ -39,7 +39,10 @@ let package = Package(
                     ],
       path: "Consumer",
       sources: ["dummy.m"],
-      resources: [.copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle")],
+      resources: [
+        .copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle"),
+        .copy("Resources/gRPCCertificates/gRPCCertificates.bundle")
+      ],
       publicHeadersPath: "Sources"
     ),
   ]
