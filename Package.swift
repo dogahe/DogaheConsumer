@@ -23,6 +23,7 @@ let package = Package(
     .library(name: "GoogleRidesharingConsumer", targets: ["GoogleRidesharingConsumerTarget"])
   ], dependencies: [
     .package(url: "https://github.com/dogahe/DogaheMaps", "1.0.13"..."1.0.13"),
+    .package(url: "https://github.com/grpc/grpc-ios.git", "1.49.1" ..< "1.50.0"),
   ],
   targets: [
     .binaryTarget(
@@ -36,6 +37,7 @@ let package = Package(
                      .product(name: "GoogleMaps", package: "DogaheMaps"),
                      .product(name: "GoogleMapsCore", package: "DogaheMaps"),
                      .product(name: "GoogleMapsBase", package: "DogaheMaps"),
+                     .product(name: "gRPC-cpp", package: "grpc-ios"),
                     ],
       path: "Consumer",
       sources: ["dummy.m"],
