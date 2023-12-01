@@ -38,6 +38,7 @@ let package = Package(
                      .product(name: "GoogleMapsCore", package: "DogaheMaps"),
                      .product(name: "GoogleMapsBase", package: "DogaheMaps"),
                      .product(name: "gRPC-cpp", package: "grpc-ios"),
+                     .product(name: "gRPC-Core", package: "grpc-ios"),
                     ],
       path: "Consumer",
       sources: ["dummy.m"],
