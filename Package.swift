@@ -22,23 +22,20 @@ let package = Package(
   products: [
     .library(name: "GoogleRidesharingConsumer", targets: ["GoogleRidesharingConsumerTarget"])
   ], dependencies: [
-    .package(url: "https://github.com/dogahe/DogaheMaps", "1.0.13"..."1.0.13"),
-    .package(url: "https://github.com/grpc/grpc-ios.git", "1.49.1" ..< "1.50.0"),
+    .package(url: "https://github.com/googlestaging/ios-maps-sdk", .exact("8.3.1")),
   ],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingConsumer",
-      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.0/GoogleRidesharingConsumer_3p.xcframework.zip",
-      checksum: "b5a39c093b5d27e23235dd7097acec6e5d026b47b485630e99a850f114184c32"
+      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.13/GoogleRidesharingConsumer_3p.xcframework.zip",
+      checksum: "1682383a98b7801f5c4021cacce4afc2937d32aa08888ab2b5e5222eb2e1bb27"
     ),
     .target(
       name: "GoogleRidesharingConsumerTarget",
       dependencies: ["GoogleRidesharingConsumer",
-                     .product(name: "GoogleMaps", package: "DogaheMaps"),
-                     .product(name: "GoogleMapsCore", package: "DogaheMaps"),
-                     .product(name: "GoogleMapsBase", package: "DogaheMaps"),
-                     .product(name: "gRPC-cpp", package: "grpc-ios"),
-                     .product(name: "gRPC-Core", package: "grpc-ios"),
+                     .product(name: "GoogleMaps", package: "ios-maps-sdk"),
+                     .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
+                     .product(name: "GoogleMapsBase", package: "ios-maps-sdk"),
                     ],
       path: "Consumer",
       sources: ["dummy.m"],
