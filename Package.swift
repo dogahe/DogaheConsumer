@@ -42,7 +42,7 @@ let package = Package(
       resources: [
         .copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle"),
         //.copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle/gRPCCertificates.bundle"),
-        //.copy("gRPCCertificates.bundle"),
+        .copy("gRPCCertificates.bundle"),
       ],
       publicHeadersPath: "Sources"
     ),
