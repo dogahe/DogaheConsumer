@@ -27,8 +27,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingConsumer",
-      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.17/GoogleRidesharingConsumer_3p.xcframework.zip",
-      checksum: "33eac08472ce0b0516a795916ed80aaba03f4b0693f81f1d697222b41d6e5043"
+      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.18/GoogleRidesharingConsumer_3p.xcframework.zip",
+      checksum: "f8cb3d134c4a533337230d6c568e0526bd586823cd4ae28b11e9a29f827a159e"
     ),
     .target(
       name: "GoogleRidesharingConsumerTarget",
@@ -41,7 +41,6 @@ let package = Package(
       sources: ["dummy.m"],
       resources: [
         .copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle"),
-        .copy("Resources/gRPCCertificates.bundle"),
       ],
       publicHeadersPath: "Sources"
     ),
