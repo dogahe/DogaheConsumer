@@ -22,13 +22,13 @@ let package = Package(
   products: [
     .library(name: "GoogleRidesharingConsumer", targets: ["GoogleRidesharingConsumerTarget"])
   ], dependencies: [
-    .package(url: "https://github.com/googlestaging/ios-maps-sdk", .exact("8.3.1")),
+    .package(url: "https://github.com/googlemaps/ios-maps-sdk", .exact("8.3.1")),
   ],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingConsumer",
-      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.18/GoogleRidesharingConsumer_3p.xcframework.zip",
-      checksum: "f8cb3d134c4a533337230d6c568e0526bd586823cd4ae28b11e9a29f827a159e"
+      url: "https://github.com/dogahe/DogaheConsumer/releases/download/1.0.19/GoogleRidesharingConsumer_3p.xcframework.zip",
+      checksum: "5d747dbce288e78065d406da2b19ae039d4521658a830ab7c9fedc4a9860c3c9"
     ),
     .target(
       name: "GoogleRidesharingConsumerTarget",
